@@ -59,10 +59,29 @@
 		}
 
 		#stuff > section {
-			width: 50%;
+			min-width: 325px;
 		}
+
 		#stuff > section > h1 {
 			background-color: #eee8d5; /* solarized base2 */
+		}
+
+		/* move contributions out to their own column if we're
+		   big enough to do so. */
+		@media screen and (min-width: 1024px) {
+			#stuff > section {
+				width: 45%;
+				min-width: 325px;
+			}
+
+			#stuff > section#contributions {
+				position: absolute;
+				top: 0px;
+				left: 50%;
+			}
+			#stuff > section#contributions > h1 {
+				margin-top: 0px; /* otherwise it doesn't line up with the first column, which has its top margin merge in with the page's. */
+			}
 		}
 
 		#stuff > section li {
