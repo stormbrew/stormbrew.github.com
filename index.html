@@ -7,7 +7,6 @@
 
 			background-color: #fdf6e3; /*solarized base3 */
 			color: #657b83; /* solarized base00 */
-			margin-left: 276px;
 		}
 
 
@@ -23,22 +22,12 @@
 		}
 
 		#info {
+			position: relative;
 			background-color: #002b36; /* solarized base03 */
 			color: #839496; /* solarized base0 */
-			position: fixed;
-			top: 10px;
-			left: 10px;
-			width: 256px;
-			height: 100%;
-
-			text-align: center;
 		}
 
 		#info > div {
-			margin-left: 25px;
-			margin-right: 25px;
-			margin-top: 20px;
-
 			background-color: #073642; /* solarized base02 */
 		}
 
@@ -46,12 +35,62 @@
 			display: block;
 		}
 
-		#info #userpic {
-			width: 128px;
-			height: 128px;
+		@media screen and (min-width: 650px) {
+			body {
+				margin-left: 276px;
+			}
 
-			margin: 10px;
-			border: 5px solid #073642; /* solarized base02 */
+			#info {
+				position: fixed;
+				top: 10px;
+				left: 10px;
+				width: 256px;
+				height: 100%;
+
+				text-align: center;
+			}
+
+			#info #userpic {
+				width: 128px;
+				height: 128px;
+
+				margin: 10px;
+				border: 5px solid #073642; /* solarized base02 */
+			}
+
+			#info > div {
+				margin-left: 25px;
+				margin-right: 25px;
+				margin-top: 20px;
+			}
+		}
+		@media screen and (max-width: 650px) {
+			#info {
+				padding-left: 84px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+
+			#info #userpic {
+				position: absolute;
+				left: 5px;
+				top: 5px;
+
+				width: 64px;
+				height: 64px;
+
+				margin: 5px;
+				border: 5px solid #073642; /* solarized base02 */
+
+				float: left;
+			}
+
+			#info > div {
+				margin-left: 5px;
+				margin-right: 10px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
 		}
 
 		#stuff {
