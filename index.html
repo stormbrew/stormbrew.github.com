@@ -105,10 +105,24 @@
 		}
 
 		#stuff > section > h1 {
-			font-size: 12pt;
+			font-size: 13pt;
 			background-color: #eee8d5; /* solarized base2 */
 			padding: 3px;
 			margin-bottom: 5px;
+		}
+
+		#stuff > section li {
+			list-style: disc outside none;
+			margin-left: 2em;
+		}
+
+		#stuff > section > dl > dd {
+			font-size: 12pt;
+			text-decoration: underline;
+			margin-top: 5px;
+		}
+		#stuff > section > dl > dt {
+			margin-left: 8px;
 		}
 
 		/* move contributions out to their own column if we're
@@ -179,15 +193,11 @@
 		<div id="personal">
 			<a href="https://www.google.com/#q=graham+batty+-bagpipe">Graham Batty</a>
 			<a href="http://goo.gl/maps/ZFwbJ">Edmonton, Alberta, Canada</a>
-			<a href="resume.html">Resume</a>
 		</div>
 		<div id="presense">
 			<a href="mailto:graham@stormbrew.ca">email</a>
 			<a href="https://twitter.com/stormbrew">twitter</a>
 			<a href="https://github.com/stormbrew">github</a>
-		</div>
-		<div id="description">
-			He's just this guy, y'know?
 		</div>
 	</div>
 
@@ -209,42 +219,66 @@
 				<li><a href="http://www.github.com/stormbrew/stir">Stir</a> Partial implementation of the C++ Standard Library</li>
 			</ul>
 		</section>
+		<section id="specialties">
+			<h1>Specialties</h1>
+			<ul>
+				<li>Ruby</li>
+				<li>Modern C++</li>
+				<li>Profiling and Performance Analysis</li>
+				<li>Scaling Architecture</li>
+			</ul>
+		</section>
 		<section id="contributions">
 			<h1>Open Source Contributions</h1>
-			<ul>
-				<li><a href="http://www.github.com/stormbrew/channel9">Channel9</a> Multilanguage VM</li>
-				<li><a href="http://www.github.com/stormbrew/channel9.rb">Channel9.rb</a> Ruby Implementation For Channel9</li>
-				<li><a href="http://www.github.com/stormbrew/cloudbridge">CloudBridge</a> Dynamic Reverse Proxy</li>
-				<li>oncloud.org Use case for cloudbridge (currently down for maintenance)</li>
-				<li><a href="http://www.github.com/stormbrew/rack-jetty">Rack-Jetty</a> Rack Adapter for JRuby</li>
-				<li><a href="http://www.github.com/stormbrew/stir">Stir</a> Partial implementation of the C++ Standard Library</li>
-				<li><a href="http://www.github.com/stormbrew/channel9">Channel9</a> Multilanguage VM</li>
-				<li><a href="http://www.github.com/stormbrew/channel9.rb">Channel9.rb</a> Ruby Implementation For Channel9</li>
-				<li><a href="http://www.github.com/stormbrew/cloudbridge">CloudBridge</a> Dynamic Reverse Proxy</li>
-				<li>oncloud.org Use case for cloudbridge (currently down for maintenance)</li>
-				<li><a href="http://www.github.com/stormbrew/rack-jetty">Rack-Jetty</a> Rack Adapter for JRuby</li>
-				<li><a href="http://www.github.com/stormbrew/stir">Stir</a> Partial implementation of the C++ Standard Library</li>
-				<li><a href="http://www.github.com/stormbrew/channel9">Channel9</a> Multilanguage VM</li>
-				<li><a href="http://www.github.com/stormbrew/channel9.rb">Channel9.rb</a> Ruby Implementation For Channel9</li>
-				<li><a href="http://www.github.com/stormbrew/cloudbridge">CloudBridge</a> Dynamic Reverse Proxy</li>
-				<li>oncloud.org Use case for cloudbridge (currently down for maintenance)</li>
-				<li><a href="http://www.github.com/stormbrew/rack-jetty">Rack-Jetty</a> Rack Adapter for JRuby</li>
-				<li><a href="http://www.github.com/stormbrew/stir">Stir</a> Partial implementation of the C++ Standard Library</li>
-				<li><a href="http://www.github.com/stormbrew/channel9">Channel9</a> Multilanguage VM</li>
-				<li><a href="http://www.github.com/stormbrew/channel9.rb">Channel9.rb</a> Ruby Implementation For Channel9</li>
-				<li><a href="http://www.github.com/stormbrew/cloudbridge">CloudBridge</a> Dynamic Reverse Proxy</li>
-				<li>oncloud.org Use case for cloudbridge (currently down for maintenance)</li>
-				<li><a href="http://www.github.com/stormbrew/rack-jetty">Rack-Jetty</a> Rack Adapter for JRuby</li>
-				<li><a href="http://www.github.com/stormbrew/stir">Stir</a> Partial implementation of the C++ Standard Library</li>
-			</ul>
+			<dl class="projects">
+				<dd id="rubinius">Rubinius</dd>
+				<dt>
+					<ul>
+						<li><a href="https://github.com/evanphx/rubinius/commit/37830956b736f2891188c083791e25d9d2e76d7d">Made it ignore empty rescue clauses rather than crash</a>.</li>
+						<li><a href="https://github.com/evanphx/rubinius/commit/48a05733cd4207a9876ec5f160488e1dd7ba496b">Fixed stack corruption after masgn.</a></li>
+						<li><a href="https://github.com/evanphx/rubinius/commit/490ed8171e2beca987f68f1703d1f8b73bdd5500">Implemented early benchmarking tools</a>.</li>
+						<li><a href="https://github.com/evanphx/rubinius/commit/c40a935b43644775a6811891017f05bc07fd1f85">Fixed incorrect behaviour when raising with a class and a string</a> <span class="if-links">(original commit <a href="https://github.com/stormbrew/rubinius/commit/48346a4f3a9f1eb178b2fc82d13184b0fe6e8d65">here</a>)</span>.</li>
+					</ul>
+				</dt>
+				<dd id="rack">Rack</dd>
+				<dt>
+					<ul>
+						<li><a href="https://github.com/rack/rack/commit/48696df4a0e04c611df219d6ad32117a8b6a2888">Made it so that handlers don't have to be included in the distribution in order to be used by using automatic discovery</a>.</li>
+						<li><a href="https://github.com/rack/rack/commit/b79ea447e8d0d9ee7abd641baa8c535e4d2e3a2c">FastCGI handler should only open one socket, either domain socket or TCP socket.</a></li>
+						<li><a href="https://github.com/rack/rack/commit/7364b87d8707ca6242efe391e387c5f0d1b4af56">Implemented a way for unusual handler options to be passed to a handler through Rackup</a>.</li>
+					</ul>
+				</dt>
+				<dd id="merb">Merb</dd>
+				<dt>
+					<ul>
+						<li><a href="https://merb.lighthouseapp.com/projects/7433/tickets/1201-nil-action-response-should-provide-a-better-exception-message#ticket-1201-2">Submitted patch to clarify what went wrong when an action returned nil</a><span class="if-links">, though in the end <a href="https://github.com/wycats/merb/commit/0ae510a11960060857c5f7bbbcac0a7c7675c3be">another approach was used</a></span>.</li>
+					</ul>
+				</dt>
+				<dd id="newos">NewOS (now part of Haiku Operating System)</dd>
+				<dt>
+					<p>You can see all commits by me by <a href="http://git.newos.org/?p=newos.git&a=search&h=f3cea94e0fc00e3c6c9bb01b9ac9d7d3867b599a&st=author&s=graham">searching 'author' for 'Graham Batty'</a> on the <a href="http://git.newos.org/?p=newos.git;a=summary">newos git repository</a>. Highlights of my commits include:</p>
+					<ul>
+						<li><a href="http://git.newos.org/?p=newos.git;a=commit;h=ce98f63bbeed6d350b653e7d13ab5d3033bd8c98">Making fixes to GDB protocol support</a></li>
+						<li><a href="http://git.newos.org/?p=newos.git;a=commit;h=de594c65306f6c242f239382cafb72a4cdc0ad60">Implemented pcnet32 network card driver from scratch.</a> <span class="if-links">(there are many more commits after that related to pcnet32 work, see the link to the searchable list above)</span></li>
+						<li><a href="http://git.newos.org/?p=newos.git;a=commit;h=973a14c5dfd91b1a9076b04fe493174e2eb60fcd">Preliminary work on making C++ support work in userland.</a></li>
+					</ul>
+				</dt>
+				<dd id="gforge">GForge</dd>
+				<dt>
+					<ul>
+						<li><a href="http://gforge.org/gf/project/gforge/tracker/?action=TrackerItemEdit&tracker_item_id=220">Made it so gforge could connect to a postgresql server on a unix domain socket instead of requiring a host:port pair.</a></li>
+						<li><a href="http://gforge.org/gf/project/gforge/tracker/?action=TrackerItemEdit&tracker_item_id=217">Made it so gforge didn't require a global site config in /etc to ease deployment issues on multiuser sites.</a></li>
+					</ul>
+				</dt>
+			</dl>
 		</section>
 		<section id="worked">
 			<h1>Companies I've Worked For</h1>
 			<ul>
 				<li><a href="http://twitch.tv/">Twitch.tv</a> - Backend Engineer (2012-present)</li>
 				<li><a href="http://nexopia.com/">Nexopia.com</a> - Development Manager (2005-2009)</li>
-				<li>iStickies - Lead Developer - (2001-2003)</li>
-				<li>Sonicity - Software Engineer - (1999-2001)</li>
+				<li>iStickies - Lead Developer (2001-2003)</li>
+				<li>Sonicity - Software Engineer (1999-2001)</li>
 			</ul>
 		</section>
 
