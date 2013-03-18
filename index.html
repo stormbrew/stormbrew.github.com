@@ -1,7 +1,8 @@
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css">
 	<style>
-		body {
+		body, html {
 			font-family: Helvetica, sans-serif;
 			font-size: 12px;
 
@@ -37,7 +38,8 @@
 
 		@media screen and (min-width: 650px) {
 			body {
-				margin-left: 276px;
+				padding-left: 276px;
+				padding-top: 10px;
 			}
 
 			#info {
@@ -99,10 +101,14 @@
 
 		#stuff > section {
 			min-width: 325px;
+			margin-bottom: 10px;
 		}
 
 		#stuff > section > h1 {
+			font-size: 12pt;
 			background-color: #eee8d5; /* solarized base2 */
+			padding: 3px;
+			margin-bottom: 5px;
 		}
 
 		/* move contributions out to their own column if we're
@@ -117,9 +123,6 @@
 				position: absolute;
 				top: 0px;
 				left: 50%;
-			}
-			#stuff > section#contributions > h1 {
-				margin-top: 0px; /* otherwise it doesn't line up with the first column, which has its top margin merge in with the page's. */
 			}
 		}
 
