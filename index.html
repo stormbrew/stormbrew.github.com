@@ -163,28 +163,6 @@
 			margin-top: 2px;
 		}
 	</style>
-
-	<script>
-		function showDetails() {
-			var details = this.getElementsByClassName('details');
-			details[0].style.display = "block";
-		}
-		function hideDetails() {
-			var details = this.getElementsByClassName('details');
-			details[0].style.display = "none";
-		}
-
-		function setupHasDetails() {
-			var detailsSections = document.getElementsByClassName('details');
-			for (var i = 0; i < detailsSections.length; i++) {
-				var parent = detailsSections[i].parentNode;
-				parent.className += " hasdetails"
-				parent.addEventListener('mouseover', showDetails, false);
-				parent.addEventListener('mouseout', hideDetails, false);
-			}
-		}
-		window.addEventListener('load', setupHasDetails, false);
-	</script>
 </head>
 
 <body>
@@ -207,10 +185,6 @@
 			<ul>
 				<li>
 					<a href="http://www.github.com/stormbrew/channel9">Channel9</a> Multilanguage VM
-					<section class="details" id="channel9">
-						<h1>Channel9</h1>
-						...
-					</section>
 				</li>
 				<li><a href="http://www.github.com/stormbrew/channel9.rb">Channel9.rb</a> Ruby Implementation For Channel9</li>
 				<li><a href="http://www.github.com/stormbrew/cloudbridge">CloudBridge</a> Dynamic Reverse Proxy</li>
