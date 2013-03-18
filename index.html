@@ -10,6 +10,9 @@
 			color: #657b83; /* solarized base00 */
 		}
 
+		p {
+			margin-bottom: 5px;
+		}
 
 		a {
 			text-decoration: inherit;
@@ -182,15 +185,34 @@
 	<div id="stuff">
 		<section id="personal">
 			<h1>Personal Things I've Worked On</h1>
-			<ul>
-				<li>
-					<a href="http://www.github.com/stormbrew/channel9">Channel9</a> Multilanguage VM
-				</li>
-				<li><a href="http://www.github.com/stormbrew/channel9.rb">Channel9.rb</a> Ruby Implementation For Channel9</li>
-				<li><a href="http://www.github.com/stormbrew/cloudbridge">CloudBridge</a> Dynamic Reverse Proxy</li>
-				<li>oncloud.org Use case for cloudbridge (currently down for maintenance)</li>
-				<li><a href="http://www.github.com/stormbrew/rack-jetty">Rack-Jetty</a> Rack Adapter for JRuby</li>
-				<li><a href="http://www.github.com/stormbrew/stir">Stir</a> Partial implementation of the C++ Standard Library</li>
+			<dl>
+				<dd>Channel9</a></dd>
+				<dt>
+					<p><a href="http://www.github.com/stormbrew/channel9">Channel9</a> is a multilanguage VM built around a non-linear stack (or stackless) design to allow for control flow to be modelled correctly for the target langauge.</p>
+					<p>It's an ongoing project that I return to frequently.</p>
+				</dt>
+				<dd>Channel9.rb</dd>
+				<dt>
+					<p><a href="http://www.github.com/stormbrew/channel9.rb">Channel9.rb</a> is a proof-of-concept Ruby Implementation For Channel9</p>
+				</dt>
+				<dd>CloudBridge</dd>
+				<dt>
+					<p><a href="http://www.github.com/stormbrew/cloudbridge">CloudBridge</a> is a Dynamic Reverse Proxy intended for use in scenarios where the number, network location, or the domains handled by the proxy will change on a second-by-second basis. By reversing the connection direction between backends and frontend, it allows the frontend to always be able to correctly serve a connection to a live backend.</p>
+				</dt>
+				<dd>oncloud.org</dd>
+				<dt>
+					<p>oncloud.org is one use case for cloudbridge. It's an open public service where users can register a subdomain and serve a local rails up directly to the internet via cloudbridge. Unlike Heroku, the app runs directly on their local machine and is simply proxied to the world.</p>
+					<p>It's particularly useful for demoing a website to people not on the local network while making live changes to it.</p>
+					<p>Note: currently down for maintenance.</p>
+				</dt>
+				<dd>Rack-Jetty</dd>
+				<dt>
+					<p><a href="http://www.github.com/stormbrew/rack-jetty">Rack-Jetty</a> is a rack adapter for JRuby, implemented as much as possible in ruby itself, using the java jetty webserver. It's a fairly simple implementation of a simple idea, but it works quite well.</p>
+				</dt>
+				<dd>Stir</dd>
+				<dt>
+					<p><a href="http://www.github.com/stormbrew/stir">Stir</a> was an attempt at a partial implementation of the C++ Standard Library, including elements of the then-new TR1 library update. It is far from complete, but it was an interesting experiment.</p>
+				</dt>
 			</ul>
 		</section>
 		<section id="specialties">
@@ -200,6 +222,7 @@
 				<li>Modern C++</li>
 				<li>Profiling and Performance Analysis</li>
 				<li>Scaling Architecture</li>
+				<li>Network Programming</li>
 			</ul>
 		</section>
 		<section id="contributions">
