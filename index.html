@@ -205,17 +205,24 @@
 		<section id="contributions">
 			<h1>Open Source Contributions</h1>
 			<dl class="projects">
+				<dd id="typhon">Typhon</dd>
+				<dt>
+					<p>Typhon was a project started by <a href="http://github.com/vic">Victor Hugo Borja</a> to implement Python on the Rubinius VM. I contributed a significant amount of code towards making it run actual python code. A subset of those changes can be seen <a href="https://github.com/vic/typhon/commits/master?page=3">in the commit history of the project</a>.
+				</dt>
 				<dd id="rubinius">Rubinius</dd>
 				<dt>
+					<p>Rubinius is a Ruby VM that has, as part of its goal, the implementation of large parts of itself in Ruby.</p>
+					<p>I was an early commiter to the rubinius project, most of my commits having been done before the project moved to git and github.</p>
 					<ul>
-						<li><a href="https://github.com/evanphx/rubinius/commit/37830956b736f2891188c083791e25d9d2e76d7d">Made it ignore empty rescue clauses rather than crash</a>.</li>
-						<li><a href="https://github.com/evanphx/rubinius/commit/48a05733cd4207a9876ec5f160488e1dd7ba496b">Fixed stack corruption after masgn.</a></li>
-						<li><a href="https://github.com/evanphx/rubinius/commit/490ed8171e2beca987f68f1703d1f8b73bdd5500">Implemented early benchmarking tools</a>.</li>
-						<li><a href="https://github.com/evanphx/rubinius/commit/c40a935b43644775a6811891017f05bc07fd1f85">Fixed incorrect behaviour when raising with a class and a string</a> <span class="if-links">(original commit <a href="https://github.com/stormbrew/rubinius/commit/48346a4f3a9f1eb178b2fc82d13184b0fe6e8d65">here</a>)</span>.</li>
+						<li><a href="https://github.com/rubinius/rubinius/commit/37830956b736f2891188c083791e25d9d2e76d7d">Made it ignore empty rescue clauses rather than crash</a>.</li>
+						<li><a href="https://github.com/rubinius/rubinius/commit/48a05733cd4207a9876ec5f160488e1dd7ba496b">Fixed stack corruption after masgn.</a></li>
+						<li><a href="https://github.com/rubinius/rubinius/commit/490ed8171e2beca987f68f1703d1f8b73bdd5500">Implemented early benchmarking tools</a>.</li>
+						<li><a href="https://github.com/rubinius/rubinius/commit/c40a935b43644775a6811891017f05bc07fd1f85">Fixed incorrect behaviour when raising with a class and a string</a> <span class="if-links">(original commit <a href="https://github.com/stormbrew/rubinius/commit/48346a4f3a9f1eb178b2fc82d13184b0fe6e8d65">here</a>)</span>.</li>
 					</ul>
 				</dt>
 				<dd id="rack">Rack</dd>
 				<dt>
+					<p>Rack is the basis of pretty much every ruby web framework at this point. It models a simple interface between web server and web application. My contributions to it were intended to make it easier to use unusual web servers without the application needing to know about them.</p>
 					<ul>
 						<li><a href="https://github.com/rack/rack/commit/48696df4a0e04c611df219d6ad32117a8b6a2888">Made it so that handlers don't have to be included in the distribution in order to be used by using automatic discovery</a>.</li>
 						<li><a href="https://github.com/rack/rack/commit/b79ea447e8d0d9ee7abd641baa8c535e4d2e3a2c">FastCGI handler should only open one socket, either domain socket or TCP socket.</a></li>
@@ -230,6 +237,8 @@
 				</dt>
 				<dd id="newos">NewOS (now part of Haiku Operating System)</dd>
 				<dt>
+					<p>NewOS was a project by Travis Geiselbrecht to implement a new, basic operating system from the ground up. It was an experimental project and a fun playground to work with basic operating system principles.</p>
+					<p>My biggest contribution was the implementation of a pcnet32 network interface that made it capable of being run under various virtual machine environments with networking enabled.</p>
 					<p>You can see all commits by me by <a href="http://git.newos.org/?p=newos.git&a=search&h=f3cea94e0fc00e3c6c9bb01b9ac9d7d3867b599a&st=author&s=graham">searching 'author' for 'Graham Batty'</a> on the <a href="http://git.newos.org/?p=newos.git;a=summary">newos git repository</a>. Highlights of my commits include:</p>
 					<ul>
 						<li><a href="http://git.newos.org/?p=newos.git;a=commit;h=ce98f63bbeed6d350b653e7d13ab5d3033bd8c98">Making fixes to GDB protocol support</a></li>
